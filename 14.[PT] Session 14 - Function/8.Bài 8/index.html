@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 8</title>
+  </head>
+  <body>
+    <script>
+      // Viết function trả ra trung bình cộng của một mảng số
+      let n = Number(prompt('Nhập vào số phần tử của mảng'));
+      let arrInt = [];
+      for (let i = 0; i < n; i++) {
+        let number = Number(prompt('Nhập vào một số'));
+        arrInt.push(number);
+      }
+      console.log('Mảng số được nhập là -->', arrInt);
+      function averageOfArray(array) {
+        let sum = 0;
+        for (let i = 0; i < array.length; i++) {
+          sum += array[i];
+        }
+        return sum / array.length;
+      }
+      console.log(
+        'Trung bình cộng của một mảng số -->',
+        averageOfArray(arrInt)
+      );
+    </script>
+  </body>
+</html>

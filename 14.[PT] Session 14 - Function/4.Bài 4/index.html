@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 4</title>
+  </head>
+  <body>
+    <script>
+      // Bước 1: Khởi tạo chuỗi dài hơn 15 ký tự
+      let stringLength = Number(prompt('Nhập vào một số lớn hơn 15:'));
+      let myString = '';
+      let char =
+        'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      function createString(length) {
+        for (let i = 0; i < length; i++) {
+          let randomOfChar = char.charAt(
+            Math.floor(Math.random() * char.length)
+          );
+          myString += randomOfChar;
+        }
+        return myString;
+      }
+      console.log(
+        'In ra chuỗi dài hơn 15 ký tự -->',
+        createString(stringLength)
+      );
+      // Bước 2: Viết Function cắt chuỗi,lấy ra 10 ký tự đầu tiên và thêm vào dấu “…” ở cuối chuỗi
+      function newString(string) {
+        return string.slice(0, 10).concat('...');
+      }
+      console.log(
+        'Chuỗi sau khi lấy ra 10 ký tự đầu tiên và thêm vào dấu “…” ở cuối chuỗi --> ',
+        newString(myString)
+      );
+    </script>
+  </body>
+</html>

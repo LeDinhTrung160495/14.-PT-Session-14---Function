@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 6</title>
+  </head>
+  <body>
+    <script>
+      // Bước 1: khởi tạo mảng với n phần tử
+      let n = Number(prompt('Nhập số phần tử của mảng:'));
+      let arrInt = [];
+      for (let i = 0; i < n; i++) {
+        let number = Number(prompt('Nhập vào một số:'));
+        arrInt.push(number);
+      }
+      console.log('Mảng được khởi tạo là -->', arrInt);
+      // Bước 2:Viết function trả ra giá trị lớn nhất trong một mảng số
+      function maxOfArray(array) {
+        let max = array[0];
+        for (let i = 1; i < array.length; i++) {
+          if (max < array[i]) {
+            max = array[i];
+          }
+        }
+        return max;
+      }
+      console.log('Giá trị lớn nhất trong một mảng số -->', maxOfArray(arrInt));
+    </script>
+  </body>
+</html>

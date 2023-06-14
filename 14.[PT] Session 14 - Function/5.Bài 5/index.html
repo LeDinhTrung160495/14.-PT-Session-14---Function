@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 5</title>
+  </head>
+  <body>
+    <script>
+      // Bước 1: Khởi tạo chuỗi dài hơn 15 ký tự
+      let stringLength = Number(prompt('Nhập vào chiều dài chuỗi:'));
+      let myString = '';
+      let char = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+      function createString(length) {
+        for (let i = 0; i < length; i++) {
+          let randomOfChar = char.charAt(
+            Math.floor(Math.random() * char.length)
+          );
+          myString += randomOfChar;
+        }
+        return myString;
+      }
+      console.log('In ra chuỗi  -->', createString(stringLength));
+      // Bước 2:Chuẩn hóa chuỗi
+      function newString(arr) {
+        let firstChar = arr.charAt(0).toUpperCase();
+        return firstChar.concat(arr.substring(1, arr.length).toLowerCase());
+      }
+      console.log('Chuỗi sau khi chuẩn hóa -->', newString(myString));
+    </script>
+  </body>
+</html>

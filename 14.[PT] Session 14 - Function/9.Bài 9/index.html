@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 9</title>
+  </head>
+  <body>
+    <script>
+      let n = Number(prompt('Nhập vào một số nguyên'));
+      let arr = [];
+      let i = 2;
+      let count = 0;
+      while (true) {
+        function checkPrime(x) {
+          if (x <= 1) {
+            return false;
+          }
+          for (let i = 2; i < Math.sqrt(x); i++) {
+            if (x % i === 0) {
+              return false;
+            }
+          }
+          return true;
+        }
+        if (checkPrime(i)) {
+          arr.push(i);
+          count++;
+        }
+        if (count === n) {
+          break;
+        }
+        i++;
+      }
+      console.log(`${n} số nguyên tố tăng dần -->`, arr);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 7</title>
+  </head>
+  <body>
+    <script>
+      let number = Number(prompt('Nhập vào một số:'));
+      // Function kiểm tra số chẵn-lẻ
+      function checkParity(x) {
+        if (x % 2 === 0) {
+          return console.log('Số vừa nhập là số chẵn');
+        } else {
+          return console.log('Số vừa nhập là số lẻ');
+        }
+      }
+      checkParity(number);
+      // Function kiểm tra số nguyên tố
+      function checkPrime(x) {
+        if (x <= 1) {
+          return false;
+        }
+        for (let i = 2; i < Math.sqrt(x); i++) {
+          if (x % i === 0) {
+            return false;
+          }
+        }
+        return true;
+      }
+      if (checkPrime(number)) {
+        console.log('Số vừa nhập là số nguyên tố');
+      } else {
+        console.log('Số vừa nhập không phải là số nguyên tố');
+      }
+      // Function kiểm tra số hoàn hảo
+      function perfectNumber(x) {
+        let sum = 0;
+        for (let i = 0; i <= x / 2; i++) {
+          if (x % i === 0) {
+            sum += i;
+          }
+        }
+        return sum;
+      }
+      if (perfectNumber(number) === number) {
+        console.log('Số vừa nhập là số hoàn hảo');
+      } else {
+        console.log('Số vừa nhập không phải là số hoàn hảo');
+      }
+    </script>
+  </body>
+</html>
